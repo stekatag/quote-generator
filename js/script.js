@@ -64,15 +64,6 @@ const newQuote = function () {
   removeLoadingSpinner();
 }
 
-// Copy quote to clipboard
-const copyQuote = async function () {
-  try {
-    await navigator.clipboard.writeText(`${quoteText.textContent} - ${authorText.textContent}`);
-  } catch (err) {
-    console.error(`💥 Failed to copy: ${err}`);
-  }
-}
-
 // Tweet quote
 const tweetQuote = function () {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
@@ -81,9 +72,8 @@ const tweetQuote = function () {
 
 // Event listeners
 newQuoteBtn.addEventListener("click", newQuote);
-// copyQuoteBtn.addEventListener("click", copyQuote);
-new ClipboardJS("#copy-quote");
 twitterBtn.addEventListener("click", tweetQuote);
+new ClipboardJS("#copy-quote");
 
 // On load
 getQuotes();
