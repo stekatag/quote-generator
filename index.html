@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://www.google.com/s2/favicons?domain=css-tricks.com"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <script defer src="js/script.js"></script>
+    <title>Quote Generator</title>
+  </head>
+  <body>
+    <div class="quote" id="quote-container">
+      <!-- Quote -->
+      <div class="quote__text">
+        <i class="fas fa-quote-left"></i>
+        <span id="quote"></span>
+        <!-- Author -->
+        <div class="quote__author">
+          <span id="author"></span>
+        </div>
+        <!-- Buttons -->
+        <div class="button-container">
+          <button class="btn btn__twitter" id="twitter" title="Tweet this!">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button class="btn" id="new-quote">New Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader hidden" id="loader"></div>
+  </body>
+</html>

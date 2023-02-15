@@ -1,0 +1,51 @@
+.button-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.8rem;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: $color-grey-dark;
+  color: $color-grey-light;
+  outline: none;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 0.5rem rgba(121, 121, 121, 0.65);
+  transition: all 0.2s;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 1.5rem;
+    padding: 0.6rem 1.8rem;
+  }
+
+  &:hover {
+    filter: brightness(115%);
+  }
+
+  &:active {
+    transform: translateY(0.5rem);
+    box-shadow: 0 0.01rem rgba(255, 255, 255, 0.65);
+  }
+
+  &__twitter:hover {
+    color: #38a1f3;
+  }
+}
+
+.fa-twitter {
+  font-size: 2.2rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 1.8rem;
+  }
+}

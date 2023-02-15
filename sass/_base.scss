@@ -1,0 +1,46 @@
+// COLORS
+$color-primary: #ed4264;
+$color-primary-dark: #d81e5b;
+$color-secondary: #ffedbc;
+$color-secondary-light: #f1dfd1;
+$color-secondary-dark: #ffde82;
+$color-grey-dark: #5c5c5c;
+$color-grey-light: #f7f7f7;
+
+// RESPONSIVE BREAKPOINTS
+// $bp-largest: 75em; // 1200px
+// $bp-large: 62.5em; // 1000px
+$bp-medium: 56.25em; // 900px
+$bp-small: 18.75em; // 300px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary, 0.6),
+    rgba($color-secondary, 0.6)
+  );
+  background-repeat: repeat;
+  color: $color-grey-dark;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
