@@ -40,7 +40,9 @@
           <button class="btn btn__twitter" id="twitter" title="Tweet this!">
             <i class="fab fa-twitter"></i>
           </button>
-          <button class="btn" id="copy-quote">Copy</button>
+          <button class="btn" id="copy-quote" data-clipboard-target="#quote">
+            Copy
+          </button>
           <button class="btn" id="new-quote">New Quote</button>
         </div>
       </div>
@@ -48,5 +50,7 @@
 
     <!-- Loader -->
     <div class="loader hidden" id="loader"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
   </body>
 </html>

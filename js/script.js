@@ -81,7 +81,8 @@ const tweetQuote = function () {
 
 // Event listeners
 newQuoteBtn.addEventListener("click", newQuote);
-copyQuoteBtn.addEventListener("click", copyQuote);
+// copyQuoteBtn.addEventListener("click", copyQuote);
+new ClipboardJS("#copy-quote");
 twitterBtn.addEventListener("click", tweetQuote);
 
 // On load
