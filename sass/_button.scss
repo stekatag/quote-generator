@@ -2,6 +2,7 @@
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
+  gap: 1.8rem;
 
   @media only screen and (max-width: $bp-small) {
     flex-direction: column-reverse;
@@ -35,6 +36,14 @@
   &:active {
     transform: translateY(0.5rem);
     box-shadow: 0 0.01rem rgba(255, 255, 255, 0.65);
+  }
+
+  &__twitter {
+    margin-right: auto;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+    }
   }
 
   &__twitter:hover {

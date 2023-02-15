@@ -3,8 +3,9 @@
 const quoteContainer = document.getElementById("quote-container");
 const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
-const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
+const copyQuoteBtn = document.getElementById("copy-quote");
+const twitterBtn = document.getElementById("twitter");
 const loader = document.getElementById("loader");
 
 const errMessage = document.createElement("p");
@@ -12,7 +13,7 @@ const errMessage = document.createElement("p");
 let data = [];
 
 // Get quotes from API
-async function getQuotes() {
+const getQuotes = async function () {
   showLoadingSpinner();
   const API_URL = "https://jacintodesign.github.io/quotes-api/data/quotes.json";
 
@@ -63,6 +64,15 @@ const newQuote = function () {
   removeLoadingSpinner();
 }
 
+// Copy quote to clipboard
+const copyQuote = async function () {
+  try {
+    await navigator.clipboard.writeText(`${quoteText.textContent} - ${authorText.textContent}`);
+  } catch (err) {
+    console.error(`💥 Failed to copy: ${err}`);
+  }
+}
+
 // Tweet quote
 const tweetQuote = function () {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
@@ -71,6 +81,7 @@ const tweetQuote = function () {
 
 // Event listeners
 newQuoteBtn.addEventListener("click", newQuote);
+copyQuoteBtn.addEventListener("click", copyQuote);
 twitterBtn.addEventListener("click", tweetQuote);
 
 // On load
